@@ -32,15 +32,20 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <ColorSchemeToggle isDarkMode={isDarkMode} toggleColorScheme={toggleColorScheme} />
-        <button
-          onClick={() => compartir('Hecha un vistazo a esto')}
-          type='button'
-          title='Compartir'>
-          <Compartir />
-          Compartir
-        </button>
+
         <Routes>
-          <Route path='/' element={<h1>Hola</h1>} />
+          <Route
+            path='/'
+            element={
+              <button
+                onClick={() => compartir('Hecha un vistazo a esto')}
+                type='button'
+                title='Compartir'>
+                <Compartir />
+                Compartir
+              </button>
+            }
+          />
           <Route path='/Accordion' element={<AccordionPage />} />
           <Route path='/Calendario' element={<CalendarioPage />} />
           <Route path='/Dropdown' element={<DropdownPage />} />
