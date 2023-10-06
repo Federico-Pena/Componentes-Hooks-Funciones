@@ -1,6 +1,23 @@
-.headerNav {
-  width: 100%;
+body.light .headerNav {
   background-color: #4f4f4f;
+}
+body.dark .headerNav {
+  background-color: #ffffff;
+  color: #4f4f4f;
+}
+body.dark .liA {
+  color: #4f4f4f;
+}
+body.dark .liA:hover {
+  color: rgba(56, 52, 52, 0.541);
+}
+
+body.dark .liA:after {
+  background-color: #333;
+}
+.headerNav {
+  background-color: #4f4f4f;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   position: sticky;
@@ -87,7 +104,8 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.795);
+    backdrop-filter: blur(10px);
     transform-origin: right top;
     transform: scaleX(0);
     transition: 0.8s
@@ -151,6 +169,22 @@
   }
   .divMenu .burger {
     display: block;
+  }
+  body.dark .burger {
+    color: #333;
+  }
+  body.dark .divMenu.open .burger {
+    color: #fff;
+  }
+  body.dark .liA {
+    color: #ffffff;
+  }
+  body.dark .liA:hover {
+    color: rgba(255, 255, 255, 0.521);
+  }
+
+  body.dark .liA:after {
+    background-color: rgba(255, 255, 255, 0.521);
   }
 }
 @keyframes menuOpen {

@@ -71,6 +71,8 @@
   border-radius: 0.3rem;
   border: 1px solid #ccc;
   text-wrap: balance;
+  text-align: center;
+  min-height: 66px;
 }
 .dias .ContainerHorasCalendario {
   list-style: none;

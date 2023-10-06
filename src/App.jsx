@@ -12,40 +12,28 @@ import { TransitionNumberPage } from './Pages/TransitionNumberPage'
 import { DropdownPage } from './Pages/DropdownPage'
 import ColorSchemeToggle from './Components/Botones/ColorSchemeToggle'
 import { useState } from 'react'
-import { Compartir } from './Components/Icons/Compartir'
-import { compartir } from './helpers/compartir'
 import { Navbar } from './Components/Navbar/Navbar'
+import { Compartir } from './Components/Botones/Compartir'
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true)
   const toggleColorScheme = () => {
     setIsDarkMode(!isDarkMode)
     if (isDarkMode) {
-      document.querySelector('.app').classList.add('light')
-      document.querySelector('.app').classList.remove('dark')
+      document.querySelector('body').classList.add('light')
+      document.querySelector('body').classList.remove('dark')
     } else {
-      document.querySelector('.app').classList.remove('light')
-      document.querySelector('.app').classList.add('dark')
+      document.querySelector('body').classList.remove('light')
+      document.querySelector('body').classList.add('dark')
     }
   }
   return (
-    <div className={`app dark`}>
+    <div className={`app`}>
       <BrowserRouter>
         <Navbar />
         <ColorSchemeToggle isDarkMode={isDarkMode} toggleColorScheme={toggleColorScheme} />
 
         <Routes>
-          <Route
-            path='/'
-            element={
-              <button
-                onClick={() => compartir('Hecha un vistazo a esto')}
-                type='button'
-                title='Compartir'>
-                <Compartir />
-                Compartir
-              </button>
-            }
-          />
+          <Route path='/' element={<Compartir />} />
           <Route path='/Accordion' element={<AccordionPage />} />
           <Route path='/Calendario' element={<CalendarioPage />} />
           <Route path='/Dropdown' element={<DropdownPage />} />

@@ -13,7 +13,7 @@ import './Paginacion.css'
     setCurrentPage(page)
   }
   return (
-    <div className={`app dark`}>
+    <div className={`app`}>
       Hola
       <div>
         <h1>Contenido de la página {currentPage}</h1>

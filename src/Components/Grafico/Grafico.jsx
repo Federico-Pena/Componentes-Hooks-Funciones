@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react'
  * function App() {
   const chartData = [5, 10, 15, 7, 20, 12] // Ejemplo de datos para el gráfico
   return (
-    <div className={`app dark`}>
+    <div className={`app`}>
       Hola
       <Grafico data={chartData} />
     </div>

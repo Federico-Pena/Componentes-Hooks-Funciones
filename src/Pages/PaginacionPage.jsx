@@ -11,7 +11,7 @@ export const PaginacionPage = () => {
     setCurrentPage(page)
   }
   return (
-    <div className={`app dark`}>
+    <div className={`app`}>
       <h1>Página Paginacion</h1>
 
       <h2>Contenido de la página {currentPage}</h2>

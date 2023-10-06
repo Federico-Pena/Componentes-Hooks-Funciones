@@ -15,7 +15,7 @@ const handleFruitSelect = (fruit) => {
 }
 
 return (
-  <div className={`app dark`}>
+  <div className={`app`}>
     Hola
     <Dropdown
       options={fruitOptions}
