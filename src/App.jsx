@@ -1,6 +1,5 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import './App.css'
-import { Navbar } from './Components/NavBar/Navbar'
 import { AccordionPage } from './Pages/AccordionPage'
 import { CalendarioPage } from './Pages/CalendarioPage'
 import { GráficoPage } from './Pages/GráficoPage'
@@ -15,6 +14,7 @@ import ColorSchemeToggle from './Components/Botones/ColorSchemeToggle'
 import { useState } from 'react'
 import { Compartir } from './Components/Icons/Compartir'
 import { compartir } from './helpers/compartir'
+import { Navbar } from './Components/Navbar/Navbar'
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true)
   const toggleColorScheme = () => {
