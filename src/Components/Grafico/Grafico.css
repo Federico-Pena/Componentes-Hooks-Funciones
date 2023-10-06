@@ -1,0 +1,8 @@
+.divGrafico {
+  width: 100%;
+  height: 100%;
+}
+.divGrafico canvas {
+  width: 100%;
+  height: 100%;
+}

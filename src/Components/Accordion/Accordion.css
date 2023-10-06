@@ -1,0 +1,23 @@
+.accordion {
+  border: 1px solid #ddd;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 100vh; /* Altura máxima inicial, ajustar según sea necesario */
+}
+
+.accordion.closed {
+  max-height: 50px; /* Ajustar la altura máxima al tamaño del encabezado cuando el acordeón está cerrado */
+}
+
+.accordion-header {
+  background-color: #333;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  padding: 10px;
+}

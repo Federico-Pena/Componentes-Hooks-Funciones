@@ -1,0 +1,96 @@
+.containerCalendario {
+  max-width: 900px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.containerCalendario .tituloHoy {
+  text-transform: capitalize;
+  font-size: 24px;
+  border-bottom: 1px solid rgb(114, 114, 114);
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: green;
+  border-radius: 0.3rem;
+}
+.containerCalendario .containerBotones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+.containerBotones .btnCalendario {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.containerBotones .btnCalendario:hover {
+  border-color: #646cff;
+}
+.containerBotones .btnCalendario:focus,
+.containerBotones .btnCalendario:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.containerCalendario .containerFechas {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  animation: fadeIn 0.5s ease;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+}
+.containerFechas .dias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+.dias .esHoy {
+  background-color: green;
+}
+.dias .dia {
+  text-transform: capitalize;
+  font-size: 16px;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid #ccc;
+  text-wrap: balance;
+}
+.dias .ContainerHorasCalendario {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: auto;
+}
+.ContainerHorasCalendario .horas {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+.ContainerHorasCalendario .horas:hover {
+  transform: scale(0.9, 1.1);
+}
+@media (max-width: 640px) {
+  .containerCalendario .containerFechas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

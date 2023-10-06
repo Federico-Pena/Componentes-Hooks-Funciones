@@ -1,0 +1,23 @@
+.app {
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  position: relative;
+  font-family: system-ui, sans-serif, serif;
+}
+
+.app.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+.app.light button {
+  color: #fff;
+  background-color: #6d6d6d;
+}
+.app.dark {
+  background-color: #1a1a1a;
+  color: #fafafa;
+}
