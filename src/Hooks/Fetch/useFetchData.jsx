@@ -39,8 +39,6 @@
         </div>
       );
     };
-
-  Nota: Asegúrate de gestionar los casos de carga y error según tus necesidades en tu componente.
 */
 import { useState, useEffect } from 'react'
 
