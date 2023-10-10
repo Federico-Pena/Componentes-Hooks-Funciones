@@ -61,7 +61,13 @@ function Calendario() {
           return (
             !(dia.dia.getDay() === 0) && (
               <div key={dia.dia} className={`dias`} data-fecha={dia.dia}>
-                <h3 className={`dia ${dia.dia.getDate() === new Date().getDate() ? 'esHoy' : ''}`}>
+                <h3
+                  className={`dia ${
+                    dia.dia.getDate() === new Date().getDate() &&
+                    dia.dia.getDay() === new Date().getDay()
+                      ? 'esHoy'
+                      : ''
+                  }`}>
                   {formatFechaParaUser(dia.dia)}
                 </h3>
                 <ul className='ContainerHorasCalendario'>

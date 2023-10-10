@@ -1,0 +1,38 @@
+.porcentajes {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  min-height: 60vh;
+  margin: auto;
+  padding: 1rem 0;
+}
+.porcentajes .tituloPorcentajes {
+  text-align: center;
+}
+.porcentajes .bar-chart {
+  list-style: none;
+  padding: 0;
+}
+
+.bar-chart .bar {
+  margin-top: 0.5rem;
+  background-color: #ccc;
+  height: 20px;
+  position: relative;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.bar .fill {
+  height: 100%;
+  background-color: #09f;
+  position: absolute;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+.bar-chart .li-bar-chart {
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin: 0.5rem 0;
+}

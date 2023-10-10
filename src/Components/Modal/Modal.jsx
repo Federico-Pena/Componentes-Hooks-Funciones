@@ -51,16 +51,16 @@ const Modal = ({ onAccept, onCancel, isOpen, onClose, children }) => {
     handleClose()
   }
   return (
-    <div id='modal' className='modal'>
-      <div id='content' className='modal-content'>
+    <dialog id='modal' className='modal'>
+      <main id='content' className='modal-content'>
         <span className='close-button' onClick={handleClose}>
           &times;
         </span>
         {children}
         <button onClick={handleAccept}>Aceptar</button>
         <button onClick={handleCancel}>Cancelar</button>
-      </div>
-    </div>
+      </main>
+    </dialog>
   )
 }
 

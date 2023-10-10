@@ -67,7 +67,7 @@ const Dropdown = ({ options, selectedOption, onSelect }) => {
           ))}
         </ul>
       )}
-      {isSelected && <p>Selected Fruit: {isSelected}</p>}
+      {isSelected && <p>Fruta: {isSelected}</p>}
     </div>
   )
 }

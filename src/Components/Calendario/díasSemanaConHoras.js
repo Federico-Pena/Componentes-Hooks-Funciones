@@ -34,9 +34,7 @@ export const díasSemanaConHoras = (currentDate) => {
   if (Number.isNaN(diaActual.getTime())) {
     return []
   }
-
   diaActual.setDate(diaActual.getDate() - diaActual.getDay())
-
   const días = [...Array(constantes.DIAS_DE_LA_SEMANA)].map((_, index) => {
     const diaHoraMal = new Date(diaActual)
     const timeZoneOffset = diaHoraMal.getTimezoneOffset() * 60000

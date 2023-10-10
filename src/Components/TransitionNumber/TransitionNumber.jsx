@@ -29,6 +29,7 @@ export const TransitionNumber = ({ from = 0, to, duration = 1000 }) => {
     let inicio
     let ultimoFrame
     const previousTo = previousToRef.current
+
     const animate = (timestamp) => {
       if (!inicio) inicio = timestamp
       const progreso = timestamp - inicio
@@ -39,13 +40,15 @@ export const TransitionNumber = ({ from = 0, to, duration = 1000 }) => {
         ultimoFrame = requestAnimationFrame(animate)
       }
     }
-    if (to !== previousTo) {
+
+    if (to !== previousTo || from !== currentValue) {
       previousToRef.current = to
       inicio = null
       ultimoFrame = requestAnimationFrame(animate)
     }
+
     return () => cancelAnimationFrame(ultimoFrame)
-  }, [from, to, duration])
+  }, [from, to, duration, currentValue])
 
   return <span>{currentValue}</span>
 }
